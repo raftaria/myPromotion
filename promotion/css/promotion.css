@@ -5,7 +5,7 @@
   font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
 }
 
-/* .blind {
+.blind {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,7 +14,7 @@
   height: 1px;
   margin: -1px;
   clip: rect(0, 0, 0, 0);
-} */
+}
 
 /* Header */
 header {
@@ -64,18 +64,20 @@ section .store-wrap {
   background: #d5e43f;
 }
 section .store {
+  position: relative;
   margin: 0 auto;
   width: 1920px;
   height: 1084px;
   background: url(../image/section_store.jpg) no-repeat 0 0;
 }
 .sale {
-  /* blind 적용 시 */
-  /* 문제 */
-  /* 발생 */
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 980px;
-  /* margin: 0 auto; */
-  margin: 173px auto;
+  margin: 0 auto;
+  /* margin: 173px auto; */
 }
 .sale::after {
   display: block;
@@ -92,7 +94,6 @@ section .store {
 .fruits:nth-child(4n + 1) {
   margin: 0;
 }
-
 .fruits img {
   border-radius: 10px;
   margin-top: 60px;
@@ -140,27 +141,62 @@ section .store {
 }
 /* recipe */
 section .recipe-wrap {
+  position: relative;
   width: 100%;
   height: 1030px;
   background: #b893f9;
 }
 section .pattern {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 185px;
   background: url(../image/pattern_recipe.png);
   background-repeat: repeat-x;
 }
 section .recipe {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0 auto;
   width: 980px;
   height: 681px;
   background: url(../image/section_recipe.png) no-repeat 0 0;
 }
+.cake-link {
+  display: block;
+  float: left;
+  width: 480px;
+  height: 482px;
+  margin-top: 199px;
+  /* background: rgba(0, 0, 0, 0.5); */
+}
+.tart-link {
+  display: block;
+  float: left;
+  width: 480px;
+  height: 482px;
+  margin-top: 199px;
+  margin-left: 20px;
+  /* background: rgba(0, 0, 0, 0.5); */
+}
 .recipe-all-link {
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   width: 310px;
   height: 91px;
   margin: 50px auto 0;
+}
+.recipe-all-link::after {
+  display: block;
+  content: '';
+  clear: both;
 }
 .recipe-all {
   width: 310px;
