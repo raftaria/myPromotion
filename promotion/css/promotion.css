@@ -1,0 +1,264 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
+}
+
+/* .blind {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+} */
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  height: 66px;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+header .logo {
+  width: 1000px;
+  margin: 0 auto;
+}
+header .logo img {
+  margin-top: 20px;
+}
+
+/* Section */
+section {
+  width :100%;
+}
+/* invite */
+section .invite-wrap {
+  width: 100%;
+  background: #fff;
+}
+section .invite {
+  margin: 0 auto;
+  width: 1920px;
+  height: 750px;
+  background: url(../image/section_invite.jpg) no-repeat 0 0;
+}
+/* creator */
+section .creator-wrap {
+  width: 100%;
+  background: #f9939d;
+}
+section .creator {
+  margin: 0 auto;
+  width: 980px;
+  height: 822px;
+  background: url(../image/section_creator.jpg) no-repeat 0 0;
+}
+/* store */
+section .store-wrap {
+  width: 100%;
+  background: #d5e43f;
+}
+section .store {
+  margin: 0 auto;
+  width: 1920px;
+  height: 1084px;
+  background: url(../image/section_store.jpg) no-repeat 0 0;
+}
+.sale {
+  /* blind 적용 시 */
+  /* 문제 */
+  /* 발생 */
+  width: 980px;
+  /* margin: 0 auto; */
+  margin: 173px auto;
+}
+.sale::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+.fruits {
+  position: relative;
+  float: left;
+  width: 230px;
+  margin-left: 20px;
+  text-align: center;
+}
+.fruits:nth-child(4n + 1) {
+  margin: 0;
+}
+
+.fruits img {
+  border-radius: 10px;
+  margin-top: 60px;
+}
+.fruits .fruits-name {
+  font-size: 20px;
+  color: #1b1d21;
+  margin-top: 20px;
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fruits .price {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.fruits .price span {
+  font-size: 20px;
+  color: #1b1d21;
+  font-weight: normal;
+}
+.fruits .fruits-hover {
+  display: none;
+  position: absolute;
+  top: 60px;
+  width: 230px;
+  height: 230px;
+  border-radius: 10px;
+  background: rgb(96, 132, 2);
+  opacity: 0.9;
+}
+.fruits:hover .fruits-hover {
+  display: block;
+}
+.fruits-hover .discount {
+  margin-top: 60px;
+  font-size: 65px;
+  color: #fff;
+}
+.fruits-hover .time {
+  font-size: 20px;
+  color: #fff;
+}
+/* recipe */
+section .recipe-wrap {
+  width: 100%;
+  height: 1030px;
+  background: #b893f9;
+}
+section .pattern {
+  width: 100%;
+  height: 185px;
+  background: url(../image/pattern_recipe.png);
+  background-repeat: repeat-x;
+}
+section .recipe {
+  margin: 0 auto;
+  width: 980px;
+  height: 681px;
+  background: url(../image/section_recipe.png) no-repeat 0 0;
+}
+.recipe-all-link {
+  display: block;
+  width: 310px;
+  height: 91px;
+  margin: 50px auto 0;
+}
+.recipe-all {
+  width: 310px;
+  height: 91px;
+  background: url(../image/go_recipe.gif);
+}
+.recipe-all:hover {
+  width: 310px;
+  height: 91px;
+  background: url(../image/go_recipe_over.gif);
+}
+/* FQA */
+section .fqa-wrap {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 100px;
+}
+section .fqa {
+  width: 980px;
+  margin: 0 auto;
+}
+.fqa .fqa-img {
+  width: 98px;
+  height: 50px;
+  margin: 80px auto 30px;
+  background: url(../image/title_faq.gif) no-repeat 0 0;
+}
+.fqa .question-box {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  display: table;
+  border-top: 1px solid #a1a5ad;
+}
+.fqa .q {
+  display: table-cell;
+  width: 60px;
+  background: url(../image/icon_question.gif) no-repeat 0 0;
+  background-color: #b893f9; /* 영역 확인용 */
+}
+.fqa .question {
+  display: table-cell;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1b1d21;
+  width: 840px;
+  line-height: 28px;
+  vertical-align: middle;
+}
+.fqa .up, .fqa .down {
+  display: table-cell;
+  width: 80px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  /* background-color: #fff; */
+  background-color: #b893f9; /* 영역 확인용 */
+}
+.fqa .answer-box {
+  display: none;
+  width: 100%;
+  padding: 20px 0;
+  background: #f7f8fa;
+}
+.fqa .answer-box.active {
+  display: table;
+}
+.fqa .a {
+  display: table-cell;
+  width:21px;
+  background: url(../image/icon_answer.gif) no-repeat;
+  padding: 20px;
+  background-color: #b893f9; /* 영역 확인용 */
+}
+.fqa .answer {
+  display: table-cell;
+  font-size: 16px;
+  color: #60656e;
+  line-height: 28px;
+  vertical-align: middle;
+}
+aside a {
+  display: block;
+}
+aside .top {
+  position: fixed;
+  right: 0;
+  bottom: 180px;
+  width: 100px;
+  height: 100px;
+  background: url(../image/go_top.gif) no-repeat 0 0;
+}
+footer {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  background: #e0e4eb;
+  font-size: 18px;
+  color: #70757d;
+}
